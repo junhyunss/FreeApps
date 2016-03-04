@@ -1,4 +1,4 @@
-package com.junhyunss.networkmodule;
+package com.junhyunsss.webcontentsviewer.networkmodule;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
