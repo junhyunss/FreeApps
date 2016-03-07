@@ -92,7 +92,7 @@ abstract public class NetworkRequest<T> implements Runnable {
     public void sendSuccess() {
         if (mListener != null) {
             if (isCanceled) {
-                mManager.sendCancel(this);
+                mManager.requestCancel(this);
             } else {
                 mListener.onSuccess(this, mResult);
             }
@@ -102,7 +102,7 @@ abstract public class NetworkRequest<T> implements Runnable {
     public void sendFail() {
         if (mListener != null) {
             if (isCanceled) {
-                mManager.sendCancel(this);
+                mManager.requestCancel(this);
             } else {
                 mListener.onFail(this, errorCode);
             }
@@ -114,6 +114,6 @@ abstract public class NetworkRequest<T> implements Runnable {
         if (mConn != null) {
             mConn.disconnect();
         }
-        mManager.sendCancel(this);
+        mManager.requestCancel(this);
     }
 }
