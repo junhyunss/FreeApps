@@ -40,7 +40,7 @@ public class OkNetworkManager {
     private static class OkResult<T> {
         OnResultListener<T> listener;
         Request request;
-        T result;
+        T result;ㅌ
         IOException e;
     }
 
