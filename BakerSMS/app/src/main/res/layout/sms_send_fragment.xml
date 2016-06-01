@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SmsSendFragment">
+
+    <EditText
+        android:id="@+id/sms_my_number_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="내 번호"
+        android:maxLines="1"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/sms_receiver_number_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="보내는 번호"
+        android:maxLines="1"
+        android:inputType="number"
+        android:layout_below="@id/sms_my_number_edittext"
+        />
+
+    <EditText
+        android:id="@+id/sms_contents_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="내용"
+        android:maxLength="150"
+        android:inputType="textMultiLine"
+        android:layout_below="@id/sms_receiver_number_edittext"
+        android:layout_above="@+id/sms_btn_layout"
+        android:gravity="top|left"
+        />
+
+    <LinearLayout
+        android:id="@+id/sms_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/sms_send_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="보내기"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/sms_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
